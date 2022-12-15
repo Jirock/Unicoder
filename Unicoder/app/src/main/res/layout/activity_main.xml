@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/c_main_black">
+
+        <!--Башка(лого и название страницы)-->
+        <LinearLayout
+            android:id="@+id/TopTitle"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/line_green_gradient"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:src="@drawable/icon_logo"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/MainTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/s_title"
+                android:letterSpacing="0.5"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <!--Контент-->
+
+        <FrameLayout
+            android:id="@+id/ContentArea"
+            android:layout_width="match_parent"
+            android:layout_height="591dp"
+            android:layout_below="@id/TopTitle"
+            android:layout_above="@id/Navbar">
+        </FrameLayout>
+
+
+        <!--Это Навбар?-->
+        <LinearLayout
+            android:id="@+id/Navbar"
+            android:background="@drawable/bg_green_gradient"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <TableLayout
+                android:id="@+id/btnBubble"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="ClickBubble">
+                <LinearLayout
+                    android:theme="@style/s_navLinearLayout">
+                    <ImageView
+                        android:layout_height="25dp"
+                        android:layout_width="25dp"
+                        android:background="@null"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_flask" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ПУЗЫРЬ"/>
+                </LinearLayout>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/btnHome"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="ClickHome">
+                <LinearLayout
+                    android:theme="@style/s_navLinearLayout">
+                    <ImageView
+                        android:id="@+id/home"
+                        android:layout_height="25dp"
+                        android:layout_width="25dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_home"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ГЛАВНОЕ"/>
+                </LinearLayout>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/btnSettings"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="ClickSettings">
+                <LinearLayout
+                    android:theme="@style/s_navLinearLayout">
+                    <ImageView
+                        android:layout_height="25dp"
+                        android:layout_width="25dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_settings"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="НАСТРОЙКИ"/>
+                </LinearLayout>
+            </TableLayout>
+
+            <TableLayout
+                android:id="@+id/btnMFAQ"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="ClickInfo">
+                <LinearLayout
+                    android:theme="@style/s_navLinearLayout">
+                    <ImageView
+                        android:layout_height="25dp"
+                        android:layout_width="25dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/icon_info" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MFAQ"/>
+                </LinearLayout>
+            </TableLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

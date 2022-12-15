@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/MainPage"
+    android:background="@color/c_main_black">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--ИНСТРУКТАЖ-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/c_content_bg"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_marginLeft="@dimen/d_content_marginLeft"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="КРАТКИЙ ИНСТРУКТАЖ"
+                    android:theme="@style/s_title"
+                    android:textColor="@color/white"/>
+                 <TextView
+                     android:layout_marginHorizontal="@dimen/d_text_hmargin"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="@string/briefing_text"
+                     android:theme="@style/s_text"
+                     android:textColor="@color/white"/>
+                </LinearLayout>
+
+            <!--ОСНОВЫ ПРОГРАММИРОВАНИЯ-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/line_main">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/d_text_hmargin"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ОСНОВЫ ПРОГРАММИРОВАНИЯ"
+                        android:theme="@style/s_title"
+                        android:textColor="@color/white"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="@dimen/d_btn_language_hmargin"
+                            android:text="C#"
+                            android:textColor="@color/white"
+                            android:theme="@style/s_button"
+                            android:background="@drawable/btn_language"
+                            android:onClick="ClickStudy"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="@dimen/d_btn_language_hmargin"
+                            android:text="PY"
+                            android:textColor="@color/white"
+                            android:theme="@style/s_button"
+                            android:background="@drawable/btn_language"
+                            android:onClick="ClickStudy"/>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="@dimen/d_btn_language_hmargin"
+                            android:text="JAVA"
+                            android:textColor="@color/white"
+                            android:theme="@style/s_button"
+                            android:background="@drawable/btn_language"
+                            android:onClick="ClickStudy"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--ЗАДАНИЯ-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:gravity="center_vertical"
+                android:background="@drawable/line_main">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/d_content_marginLeft"
+                        android:layout_marginBottom="15dp"
+                        android:text="Задания"
+                        android:theme="@style/s_title"
+                        android:textColor="@color/white"/>
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="25dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="140dp"
+                                android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                                android:text="EASY"
+                                android:theme="@style/s_text"
+                                android:background="@drawable/btn_task_easy"/>
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="140dp"
+                                android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                                android:background="@drawable/btn_task_normal"
+                                android:text="NORMAL"
+                                android:theme="@style/s_text" />
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="140dp"
+                                android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                                android:text="HARD"
+                                android:background="@drawable/btn_task_hard"
+                                android:theme="@style/s_text"/>
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="140dp"
+                                android:background="@drawable/btn_task_insane"
+                                android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                                android:text="INSANE"
+                                android:theme="@style/s_text"/>
+                            <Button
+                                android:layout_width="80dp"
+                                android:layout_height="140dp"
+                                android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                                android:background="@drawable/btn_task_horror"
+                                android:text="HORROR"
+                                android:theme="@style/s_text"/>
+                             <Button
+                                 android:layout_width="80dp"
+                                 android:layout_height="140dp"
+                                 android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                                 android:background="@drawable/btn_task_junior"
+                                 android:text="JUNIOR"
+                                 android:theme="@style/s_text"/>
+                        </LinearLayout>
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--Совет-->
+
+
+            <LinearLayout
+                android:paddingTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@color/c_main_black"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/d_content_marginLeft"
+                    android:theme="@style/s_title"
+                    android:textColor="@color/white"
+                    android:text="DO YOU NEED POWER?"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/d_text_hmargin"
+                    android:textColor="@color/white"
+                    android:theme="@style/s_text"
+                    android:text="@string/about_motivation"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

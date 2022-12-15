@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="d_content_marginLeft">20dp</dimen>
+    <dimen name="d_btn_language_hmargin">1dp</dimen>
+    <dimen name="d_btn_task_hmargin">2dp</dimen>
+    <dimen name="d_text_hmargin">20dp</dimen>
+    <dimen name="d_bubble_text_mleft">10dp</dimen>
+    <dimen name="d_bubble_text_mright">5dp</dimen>
+    <dimen name="d_bubble_image_hmargin">10dp</dimen>
+</resources>

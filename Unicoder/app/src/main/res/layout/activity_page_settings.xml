@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity"
+    android:background="@color/c_main_black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/d_text_hmargin">
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Консоль"
+                android:theme="@style/s_settings_text"/>
+            <Switch
+                android:id="@+id/switch_console"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/InvisContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="invisible">
+            <EditText
+                android:id="@+id/SettingsConsole"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:theme="@style/s_text"
+                android:hint="Введи команду"
+                android:textColorHint="@color/c_btnLanguage_bg"
+                android:textColor="@color/c_btnLanguage_bg"/>
+
+            <Button
+                android:id="@+id/ConsoleButton"
+                android:layout_marginTop="20dp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_green_gradient"
+                android:text="КЛИК!"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_easter"
+            android:visibility="invisible">
+
+        </ImageView>
+
+    </LinearLayout>
+</FrameLayout>

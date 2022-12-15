@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_content_bg"
+    android:id="@+id/StudyPage">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_white">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/ChapterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/s_title"
+                android:layout_marginHorizontal="@dimen/d_text_hmargin"/>
+
+            <TextView
+                android:id="@+id/ChapterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:theme="@style/s_text"
+                android:layout_marginHorizontal="20dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

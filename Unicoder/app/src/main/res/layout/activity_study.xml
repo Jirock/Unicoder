@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_main_black">
+
+        <LinearLayout
+            android:id="@+id/topBtn"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"/>
+                <TextView
+                    android:id="@+id/STitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ОСНОВЫ C#"
+                    android:textSize="25dp"
+                    android:textColor="@color/white"
+                    android:theme="@style/s_title"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/line_red_gradient">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/btnChapter1"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                            android:background="@drawable/bg_red_gradient"
+                            android:text="Глава 1"/>
+
+                        <Button
+                            android:id="@+id/btnChapter2"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                            android:background="@drawable/bg_red_gradient"
+                            android:text="Глава 2">
+                        </Button>
+                        <Button
+                            android:id="@+id/btnChapter3"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:layout_marginHorizontal="@dimen/d_btn_task_hmargin"
+                            android:background="@drawable/bg_red_gradient"
+                            android:text="Глава 3">
+                        </Button>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/ChapterArea"
+            android:layout_below="@+id/topBtn"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"/>
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
